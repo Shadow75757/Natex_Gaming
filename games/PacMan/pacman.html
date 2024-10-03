@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="PT-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../../images/favicon.ico" type="image/ico" />
+    <title>PacMan</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="../../index.html">Natex</a>
+      </div>
+      <div class="menu-icon" style="line-height: 50px; height: 50px">
+        <a
+          href="../../index.html"
+          style="
+            text-decoration: none;
+            font-size: 35px;
+            display: inline-block;
+            color: #fff;
+            padding-left: 7px;
+          "
+          >←</a
+        >
+      </div>
+    </nav>
+
+    <h1>PacMan</h1>
+
+    <div id="pacman"></div>
+    <script src="pacman.js"></script>
+    <script src="modernizr-1.5.min.js"></script>
+
+    <script>
+      var el = document.getElementById("pacman");
+
+      if (
+        Modernizr.canvas &&
+        Modernizr.localstorage &&
+        Modernizr.audio &&
+        (Modernizr.audio.ogg || Modernizr.audio.mp3)
+      ) {
+        window.setTimeout(function () {
+          PACMAN.init(el, "./");
+        }, 0);
+      } else {
+        el.innerHTML =
+          "Sorry, needs a decent browser<br /><small>" +
+          "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+      }
+    </script>
+
+    <div class="control">
+      <h1>Controls</h1>
+      <h1 style="font-size: 20px">Movement - Arrow Keys</h1>
+      <h1 style="font-size: 20px">Pause - P</h1>
+      <h1 style="font-size: 20px">New Game - N</h1>
+    </div>
+  </body>
+</html>

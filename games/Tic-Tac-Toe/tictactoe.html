@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="PT-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../../images/favicon.ico" type="image/ico" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="../../index.html">Natex</a>
+      </div>
+      <div class="menu-icon" style="line-height: 50px; height: 50px">
+        <a
+          href="../../index.html"
+          style="
+            text-decoration: none;
+            font-size: 35px;
+            display: inline-block;
+            padding-left: 7px;
+            color: white;
+          "
+          >←</a
+        >
+      </div>
+    </nav>
+    <!-- Stars container -->
+    <div class="stars" id="stars"></div>
+
+    <h1 style="font-size: 3.5rem"><u>Tic-Tac-Toe</u></h1>
+    <div class="board" id="board"></div>
+    <p id="status">Player X's turn</p>
+
+    <div class="modal" id="resultModal">
+      <div class="modal-content">
+        <p id="resultText"></p>
+        <button id="restartBtn">Restart Game</button>
+      </div>
+    </div>
+
+    <script src="ttt.js"></script>
+  </body>
+</html>

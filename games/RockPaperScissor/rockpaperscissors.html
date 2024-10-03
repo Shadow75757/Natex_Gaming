@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../../images/favicon.ico" type="image/ico" />
+    <title>Rock Paper Scissors Game</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="../../index.html">Natex</a>
+      </div>
+      <div class="menu-icon" style="line-height: 50px; height: 50px">
+        <a
+          href="../../index.html"
+          style="
+            text-decoration: none;
+            font-size: 35px;
+            display: inline-block;
+            color: #fff;
+            padding-left: 7px;
+          "
+          >←</a
+        >
+      </div>
+    </nav>
+
+    <h1>Rock Paper Scissors</h1>
+    <br />
+    <div class="move-buttons-container">
+      <button onclick="play('Rock');" class="move-button">
+        <img
+          src="https://i.ibb.co/wpPkdX9/rock-emoji.png"
+          alt="rock-emoji"
+          class="move-icon"
+        />
+      </button>
+
+      <button onclick="play('Paper');" class="move-button">
+        <img
+          src="https://i.ibb.co/6RBBPs4/paper-emoji.png"
+          alt="paper-emoji"
+          class="move-icon"
+        />
+      </button>
+
+      <button onclick="play('Scissors');" class="move-button">
+        <img
+          src="https://i.ibb.co/P1fNvYW/scissors-emoji.png"
+          alt="scissors-emoji"
+          class="move-icon"
+        />
+      </button>
+    </div>
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button onclick="resetGame();" class="close-button">Reset Game</button>
+
+    <!-- Modal structure -->
+    <div class="modal" id="myModal">
+      <p class="modal-content"></p>
+      <button onclick="closeModal();" class="close-button">Close</button>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <script src="rockpaperscissors.js"></script>
+  </body>
+</html>
