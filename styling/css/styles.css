@@ -1,0 +1,25 @@
+.image {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .image {
+        max-height: 240px;
+    }
+
+    .hover-content {
+        font-size: 14px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
